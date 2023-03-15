@@ -22,23 +22,31 @@ const CREATE_INPUT = {
   id: "exampleId",
   createdAt: new Date(),
   updatedAt: new Date(),
+  answerResult: "exampleAnswerResult",
+  lastUpdateUserId: "exampleLastUpdateUserId",
 };
 const CREATE_RESULT = {
   id: "exampleId",
   createdAt: new Date(),
   updatedAt: new Date(),
+  answerResult: "exampleAnswerResult",
+  lastUpdateUserId: "exampleLastUpdateUserId",
 };
 const FIND_MANY_RESULT = [
   {
     id: "exampleId",
     createdAt: new Date(),
     updatedAt: new Date(),
+    answerResult: "exampleAnswerResult",
+    lastUpdateUserId: "exampleLastUpdateUserId",
   },
 ];
 const FIND_ONE_RESULT = {
   id: "exampleId",
   createdAt: new Date(),
   updatedAt: new Date(),
+  answerResult: "exampleAnswerResult",
+  lastUpdateUserId: "exampleLastUpdateUserId",
 };
 
 const service = {

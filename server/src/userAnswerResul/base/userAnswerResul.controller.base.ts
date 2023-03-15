@@ -69,6 +69,9 @@ export class UserAnswerResulControllerBase {
             id: true,
           },
         },
+
+        answerResult: true,
+        lastUpdateUserId: true,
       },
     });
   }
@@ -99,6 +102,9 @@ export class UserAnswerResulControllerBase {
             id: true,
           },
         },
+
+        answerResult: true,
+        lastUpdateUserId: true,
       },
     });
   }
@@ -130,6 +136,9 @@ export class UserAnswerResulControllerBase {
             id: true,
           },
         },
+
+        answerResult: true,
+        lastUpdateUserId: true,
       },
     });
     if (result === null) {
@@ -178,6 +187,9 @@ export class UserAnswerResulControllerBase {
               id: true,
             },
           },
+
+          answerResult: true,
+          lastUpdateUserId: true,
         },
       });
     } catch (error) {
@@ -217,6 +229,9 @@ export class UserAnswerResulControllerBase {
               id: true,
             },
           },
+
+          answerResult: true,
+          lastUpdateUserId: true,
         },
       });
     } catch (error) {

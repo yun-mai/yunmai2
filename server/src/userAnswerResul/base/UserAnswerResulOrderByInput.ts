@@ -53,6 +53,24 @@ class UserAnswerResulOrderByInput {
     nullable: true,
   })
   userIdId?: SortOrder;
+
+  @ApiProperty({
+    required: false,
+    enum: ["asc", "desc"],
+  })
+  @Field(() => SortOrder, {
+    nullable: true,
+  })
+  answerResult?: SortOrder;
+
+  @ApiProperty({
+    required: false,
+    enum: ["asc", "desc"],
+  })
+  @Field(() => SortOrder, {
+    nullable: true,
+  })
+  lastUpdateUserId?: SortOrder;
 }
 
 export { UserAnswerResulOrderByInput as UserAnswerResulOrderByInput };

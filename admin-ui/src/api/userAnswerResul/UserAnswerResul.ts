@@ -5,4 +5,6 @@ export type UserAnswerResul = {
   createdAt: Date;
   updatedAt: Date;
   userId?: User | null;
+  answerResult: string | null;
+  lastUpdateUserId: string | null;
 };

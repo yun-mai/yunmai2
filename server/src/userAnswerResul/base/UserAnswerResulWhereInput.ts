@@ -15,6 +15,7 @@ import { StringFilter } from "../../util/StringFilter";
 import { Type } from "class-transformer";
 import { IsOptional, ValidateNested } from "class-validator";
 import { UserWhereUniqueInput } from "../../user/base/UserWhereUniqueInput";
+import { StringNullableFilter } from "../../util/StringNullableFilter";
 
 @InputType()
 class UserAnswerResulWhereInput {
@@ -40,6 +41,28 @@ class UserAnswerResulWhereInput {
     nullable: true,
   })
   userId?: UserWhereUniqueInput;
+
+  @ApiProperty({
+    required: false,
+    type: StringNullableFilter,
+  })
+  @Type(() => StringNullableFilter)
+  @IsOptional()
+  @Field(() => StringNullableFilter, {
+    nullable: true,
+  })
+  answerResult?: StringNullableFilter;
+
+  @ApiProperty({
+    required: false,
+    type: StringNullableFilter,
+  })
+  @Type(() => StringNullableFilter)
+  @IsOptional()
+  @Field(() => StringNullableFilter, {
+    nullable: true,
+  })
+  lastUpdateUserId?: StringNullableFilter;
 }
 
 export { UserAnswerResulWhereInput as UserAnswerResulWhereInput };

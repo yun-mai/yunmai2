@@ -49,6 +49,28 @@ class UserAnswerResul {
   @Type(() => User)
   @IsOptional()
   userId?: User | null;
+
+  @ApiProperty({
+    required: false,
+    type: String,
+  })
+  @IsString()
+  @IsOptional()
+  @Field(() => String, {
+    nullable: true,
+  })
+  answerResult!: string | null;
+
+  @ApiProperty({
+    required: false,
+    type: String,
+  })
+  @IsString()
+  @IsOptional()
+  @Field(() => String, {
+    nullable: true,
+  })
+  lastUpdateUserId!: string | null;
 }
 
 export { UserAnswerResul as UserAnswerResul };

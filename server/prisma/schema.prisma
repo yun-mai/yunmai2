@@ -32,11 +32,13 @@ model User {
 }
 
 model UserAnswerResul {
-  id        String   @id @default(cuid())
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-  userId    User?    @relation(fields: [userIdId], references: [id])
-  userIdId  String?
+  id               String   @id @default(cuid())
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+  userId           User?    @relation(fields: [userIdId], references: [id])
+  userIdId         String?
+  answerResult     String?
+  lastUpdateUserId String?
 }
 
 model UserPointInfo {

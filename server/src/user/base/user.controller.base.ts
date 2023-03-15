@@ -388,6 +388,9 @@ export class UserControllerBase {
             id: true,
           },
         },
+
+        answerResult: true,
+        lastUpdateUserId: true,
       },
     });
     if (results === null) {

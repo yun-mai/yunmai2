@@ -5,4 +5,6 @@ export type UserAnswerResulOrderByInput = {
   createdAt?: SortOrder;
   updatedAt?: SortOrder;
   userIdId?: SortOrder;
+  answerResult?: SortOrder;
+  lastUpdateUserId?: SortOrder;
 };

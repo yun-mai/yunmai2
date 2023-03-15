@@ -19,6 +19,11 @@ export const UserPointInfoShow = (props: ShowProps): React.ReactElement => {
         <ReferenceField label="用户ID" source="user.id" reference="User">
           <TextField source={USER_TITLE_FIELD} />
         </ReferenceField>
+        <TextField label="积分等级ID" source="pointLevelId" />
+        <TextField label="总积分" source="totalPoints" />
+        <TextField label="当前积分" source="currentPoints" />
+        <TextField label="积分总消费" source="totalExpendPoint" />
+        <TextField label="丹药值" source="pelletValue" />
       </SimpleShowLayout>
     </Show>
   );

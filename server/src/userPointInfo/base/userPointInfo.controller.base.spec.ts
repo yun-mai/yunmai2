@@ -22,23 +22,43 @@ const CREATE_INPUT = {
   id: "exampleId",
   createdAt: new Date(),
   updatedAt: new Date(),
+  pointLevelId: "examplePointLevelId",
+  totalPoints: 42.42,
+  currentPoints: 42.42,
+  totalExpendPoint: 42.42,
+  pelletValue: 42.42,
 };
 const CREATE_RESULT = {
   id: "exampleId",
   createdAt: new Date(),
   updatedAt: new Date(),
+  pointLevelId: "examplePointLevelId",
+  totalPoints: 42.42,
+  currentPoints: 42.42,
+  totalExpendPoint: 42.42,
+  pelletValue: 42.42,
 };
 const FIND_MANY_RESULT = [
   {
     id: "exampleId",
     createdAt: new Date(),
     updatedAt: new Date(),
+    pointLevelId: "examplePointLevelId",
+    totalPoints: 42.42,
+    currentPoints: 42.42,
+    totalExpendPoint: 42.42,
+    pelletValue: 42.42,
   },
 ];
 const FIND_ONE_RESULT = {
   id: "exampleId",
   createdAt: new Date(),
   updatedAt: new Date(),
+  pointLevelId: "examplePointLevelId",
+  totalPoints: 42.42,
+  currentPoints: 42.42,
+  totalExpendPoint: 42.42,
+  pelletValue: 42.42,
 };
 
 const service = {

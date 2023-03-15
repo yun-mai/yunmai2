@@ -11,7 +11,13 @@ https://docs.amplication.com/how-to/custom-code
   */
 import { ObjectType, Field } from "@nestjs/graphql";
 import { ApiProperty } from "@nestjs/swagger";
-import { IsString, IsDate, ValidateNested, IsOptional } from "class-validator";
+import {
+  IsString,
+  IsDate,
+  ValidateNested,
+  IsOptional,
+  IsNumber,
+} from "class-validator";
 import { Type } from "class-transformer";
 import { User } from "../../user/base/User";
 
@@ -49,6 +55,61 @@ class UserPointInfo {
   @Type(() => User)
   @IsOptional()
   userId?: User | null;
+
+  @ApiProperty({
+    required: false,
+    type: String,
+  })
+  @IsString()
+  @IsOptional()
+  @Field(() => String, {
+    nullable: true,
+  })
+  pointLevelId!: string | null;
+
+  @ApiProperty({
+    required: false,
+    type: Number,
+  })
+  @IsNumber()
+  @IsOptional()
+  @Field(() => Number, {
+    nullable: true,
+  })
+  totalPoints!: number | null;
+
+  @ApiProperty({
+    required: false,
+    type: Number,
+  })
+  @IsNumber()
+  @IsOptional()
+  @Field(() => Number, {
+    nullable: true,
+  })
+  currentPoints!: number | null;
+
+  @ApiProperty({
+    required: false,
+    type: Number,
+  })
+  @IsNumber()
+  @IsOptional()
+  @Field(() => Number, {
+    nullable: true,
+  })
+  totalExpendPoint!: number | null;
+
+  @ApiProperty({
+    required: false,
+    type: Number,
+  })
+  @IsNumber()
+  @IsOptional()
+  @Field(() => Number, {
+    nullable: true,
+  })
+  pelletValue!: number | null;
 }
 
 export { UserPointInfo as UserPointInfo };

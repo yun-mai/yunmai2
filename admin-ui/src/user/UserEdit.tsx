@@ -8,6 +8,8 @@ import {
   PasswordInput,
   SelectArrayInput,
   ReferenceArrayInput,
+  SelectInput,
+  DateTimeInput,
 } from "react-admin";
 
 import { UserPointInfoTitle } from "../userPointInfo/UserPointInfoTitle";
@@ -44,6 +46,28 @@ export const UserEdit = (props: EditProps): React.ReactElement => {
         >
           <SelectArrayInput optionText={UserAnswerResulTitle} />
         </ReferenceArrayInput>
+        <TextInput label="第三方登录类型" source="oauthType" />
+        <TextInput label="用户的唯一标识" source="openId" />
+        <TextInput label="微信登录会话密钥" source="sessionKey" />
+        <TextInput label="用户在微信开放平台的唯一标识符" source="unionId" />
+        <TextInput label="业务登录凭证" source="sessionId" />
+        <TextInput label="手机号码" source="phone" />
+        <TextInput label="手机类型" source="mobileType" />
+        <TextInput label="用户昵称" source="nickName" />
+        <TextInput label="用户头像" source="avatarUrl" />
+        <SelectInput
+          source="gender"
+          label="用户性别"
+          choices={[
+            { label: "man", value: "Man" },
+            { label: "woman", value: "Woman" },
+            { label: "unknown", value: "Unknown" },
+          ]}
+          optionText="label"
+          allowEmpty
+          optionValue="value"
+        />
+        <DateTimeInput label="出生年月" source="birthday" />
       </SimpleForm>
     </Edit>
   );

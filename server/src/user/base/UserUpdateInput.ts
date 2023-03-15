@@ -11,12 +11,20 @@ https://docs.amplication.com/how-to/custom-code
   */
 import { InputType, Field } from "@nestjs/graphql";
 import { ApiProperty } from "@nestjs/swagger";
-import { IsString, IsOptional, IsJSON, ValidateNested } from "class-validator";
+import {
+  IsString,
+  IsOptional,
+  IsJSON,
+  ValidateNested,
+  IsEnum,
+  IsDate,
+} from "class-validator";
 import { GraphQLJSON } from "graphql-type-json";
 import { InputJsonValue } from "../../types";
 import { UserPointInfoUpdateManyWithoutUsersInput } from "./UserPointInfoUpdateManyWithoutUsersInput";
 import { Type } from "class-transformer";
 import { UserAnswerResulUpdateManyWithoutUsersInput } from "./UserAnswerResulUpdateManyWithoutUsersInput";
+import { EnumUserGender } from "./EnumUserGender";
 
 @InputType()
 class UserUpdateInput {
@@ -97,6 +105,127 @@ class UserUpdateInput {
     nullable: true,
   })
   userAnswerResuls?: UserAnswerResulUpdateManyWithoutUsersInput;
+
+  @ApiProperty({
+    required: false,
+    type: String,
+  })
+  @IsString()
+  @IsOptional()
+  @Field(() => String, {
+    nullable: true,
+  })
+  oauthType?: string;
+
+  @ApiProperty({
+    required: false,
+    type: String,
+  })
+  @IsString()
+  @IsOptional()
+  @Field(() => String, {
+    nullable: true,
+  })
+  openId?: string;
+
+  @ApiProperty({
+    required: false,
+    type: String,
+  })
+  @IsString()
+  @IsOptional()
+  @Field(() => String, {
+    nullable: true,
+  })
+  sessionKey?: string;
+
+  @ApiProperty({
+    required: false,
+    type: String,
+  })
+  @IsString()
+  @IsOptional()
+  @Field(() => String, {
+    nullable: true,
+  })
+  unionId?: string;
+
+  @ApiProperty({
+    required: false,
+    type: String,
+  })
+  @IsString()
+  @IsOptional()
+  @Field(() => String, {
+    nullable: true,
+  })
+  sessionId?: string;
+
+  @ApiProperty({
+    required: false,
+    type: String,
+  })
+  @IsString()
+  @IsOptional()
+  @Field(() => String, {
+    nullable: true,
+  })
+  phone?: string | null;
+
+  @ApiProperty({
+    required: false,
+    type: String,
+  })
+  @IsString()
+  @IsOptional()
+  @Field(() => String, {
+    nullable: true,
+  })
+  mobileType?: string | null;
+
+  @ApiProperty({
+    required: false,
+    type: String,
+  })
+  @IsString()
+  @IsOptional()
+  @Field(() => String, {
+    nullable: true,
+  })
+  nickName?: string | null;
+
+  @ApiProperty({
+    required: false,
+    type: String,
+  })
+  @IsString()
+  @IsOptional()
+  @Field(() => String, {
+    nullable: true,
+  })
+  avatarUrl?: string | null;
+
+  @ApiProperty({
+    required: false,
+    enum: EnumUserGender,
+  })
+  @IsEnum(EnumUserGender)
+  @IsOptional()
+  @Field(() => EnumUserGender, {
+    nullable: true,
+  })
+  gender?: "Man" | "Woman" | "Unknown" | null;
+
+  @ApiProperty({
+    required: false,
+  })
+  @IsDate()
+  @Type(() => Date)
+  @IsOptional()
+  @Field(() => Date, {
+    nullable: true,
+  })
+  birthday?: Date | null;
 }
 
 export { UserUpdateInput as UserUpdateInput };

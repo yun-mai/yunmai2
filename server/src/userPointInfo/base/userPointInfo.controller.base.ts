@@ -69,6 +69,12 @@ export class UserPointInfoControllerBase {
             id: true,
           },
         },
+
+        pointLevelId: true,
+        totalPoints: true,
+        currentPoints: true,
+        totalExpendPoint: true,
+        pelletValue: true,
       },
     });
   }
@@ -99,6 +105,12 @@ export class UserPointInfoControllerBase {
             id: true,
           },
         },
+
+        pointLevelId: true,
+        totalPoints: true,
+        currentPoints: true,
+        totalExpendPoint: true,
+        pelletValue: true,
       },
     });
   }
@@ -130,6 +142,12 @@ export class UserPointInfoControllerBase {
             id: true,
           },
         },
+
+        pointLevelId: true,
+        totalPoints: true,
+        currentPoints: true,
+        totalExpendPoint: true,
+        pelletValue: true,
       },
     });
     if (result === null) {
@@ -178,6 +196,12 @@ export class UserPointInfoControllerBase {
               id: true,
             },
           },
+
+          pointLevelId: true,
+          totalPoints: true,
+          currentPoints: true,
+          totalExpendPoint: true,
+          pelletValue: true,
         },
       });
     } catch (error) {
@@ -217,6 +241,12 @@ export class UserPointInfoControllerBase {
               id: true,
             },
           },
+
+          pointLevelId: true,
+          totalPoints: true,
+          currentPoints: true,
+          totalExpendPoint: true,
+          pelletValue: true,
         },
       });
     } catch (error) {

@@ -42,11 +42,16 @@ model UserAnswerResul {
 }
 
 model UserPointInfo {
-  id        String   @id @default(cuid())
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-  userId    User?    @relation(fields: [userIdId], references: [id])
-  userIdId  String?
+  id               String   @id @default(cuid())
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+  userId           User?    @relation(fields: [userIdId], references: [id])
+  userIdId         String?
+  pointLevelId     String?
+  totalPoints      Float?
+  currentPoints    Float?
+  totalExpendPoint Float?
+  pelletValue      Float?
 }
 
 enum EnumUserGender {

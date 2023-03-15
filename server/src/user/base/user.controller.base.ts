@@ -287,6 +287,12 @@ export class UserControllerBase {
             id: true,
           },
         },
+
+        pointLevelId: true,
+        totalPoints: true,
+        currentPoints: true,
+        totalExpendPoint: true,
+        pelletValue: true,
       },
     });
     if (results === null) {

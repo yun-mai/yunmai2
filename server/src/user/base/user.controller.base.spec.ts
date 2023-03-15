@@ -26,6 +26,16 @@ const CREATE_INPUT = {
   lastName: "exampleLastName",
   username: "exampleUsername",
   password: "examplePassword",
+  oauthType: "exampleOauthType",
+  openId: "exampleOpenId",
+  sessionKey: "exampleSessionKey",
+  unionId: "exampleUnionId",
+  sessionId: "exampleSessionId",
+  phone: "examplePhone",
+  mobileType: "exampleMobileType",
+  nickName: "exampleNickName",
+  avatarUrl: "exampleAvatarUrl",
+  birthday: new Date(),
 };
 const CREATE_RESULT = {
   id: "exampleId",
@@ -35,6 +45,16 @@ const CREATE_RESULT = {
   lastName: "exampleLastName",
   username: "exampleUsername",
   password: "examplePassword",
+  oauthType: "exampleOauthType",
+  openId: "exampleOpenId",
+  sessionKey: "exampleSessionKey",
+  unionId: "exampleUnionId",
+  sessionId: "exampleSessionId",
+  phone: "examplePhone",
+  mobileType: "exampleMobileType",
+  nickName: "exampleNickName",
+  avatarUrl: "exampleAvatarUrl",
+  birthday: new Date(),
 };
 const FIND_MANY_RESULT = [
   {
@@ -45,6 +65,16 @@ const FIND_MANY_RESULT = [
     lastName: "exampleLastName",
     username: "exampleUsername",
     password: "examplePassword",
+    oauthType: "exampleOauthType",
+    openId: "exampleOpenId",
+    sessionKey: "exampleSessionKey",
+    unionId: "exampleUnionId",
+    sessionId: "exampleSessionId",
+    phone: "examplePhone",
+    mobileType: "exampleMobileType",
+    nickName: "exampleNickName",
+    avatarUrl: "exampleAvatarUrl",
+    birthday: new Date(),
   },
 ];
 const FIND_ONE_RESULT = {
@@ -55,6 +85,16 @@ const FIND_ONE_RESULT = {
   lastName: "exampleLastName",
   username: "exampleUsername",
   password: "examplePassword",
+  oauthType: "exampleOauthType",
+  openId: "exampleOpenId",
+  sessionKey: "exampleSessionKey",
+  unionId: "exampleUnionId",
+  sessionId: "exampleSessionId",
+  phone: "examplePhone",
+  mobileType: "exampleMobileType",
+  nickName: "exampleNickName",
+  avatarUrl: "exampleAvatarUrl",
+  birthday: new Date(),
 };
 
 const service = {
@@ -141,6 +181,7 @@ describe("User", () => {
         ...CREATE_RESULT,
         createdAt: CREATE_RESULT.createdAt.toISOString(),
         updatedAt: CREATE_RESULT.updatedAt.toISOString(),
+        birthday: CREATE_RESULT.birthday.toISOString(),
       });
   });
 
@@ -153,6 +194,7 @@ describe("User", () => {
           ...FIND_MANY_RESULT[0],
           createdAt: FIND_MANY_RESULT[0].createdAt.toISOString(),
           updatedAt: FIND_MANY_RESULT[0].updatedAt.toISOString(),
+          birthday: FIND_MANY_RESULT[0].birthday.toISOString(),
         },
       ]);
   });
@@ -176,6 +218,7 @@ describe("User", () => {
         ...FIND_ONE_RESULT,
         createdAt: FIND_ONE_RESULT.createdAt.toISOString(),
         updatedAt: FIND_ONE_RESULT.updatedAt.toISOString(),
+        birthday: FIND_ONE_RESULT.birthday.toISOString(),
       });
   });
 
@@ -189,6 +232,7 @@ describe("User", () => {
         ...CREATE_RESULT,
         createdAt: CREATE_RESULT.createdAt.toISOString(),
         updatedAt: CREATE_RESULT.updatedAt.toISOString(),
+        birthday: CREATE_RESULT.birthday.toISOString(),
       })
       .then(function () {
         agent

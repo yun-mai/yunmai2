@@ -18,6 +18,17 @@ model User {
   roles            Json
   userPointInfos   UserPointInfo[]
   userAnswerResuls UserAnswerResul[]
+  oauthType        String
+  openId           String
+  sessionKey       String
+  unionId          String
+  sessionId        String
+  phone            String?
+  mobileType       String?
+  nickName         String?
+  avatarUrl        String?
+  gender           EnumUserGender?
+  birthday         DateTime?
 }
 
 model UserAnswerResul {
@@ -34,4 +45,10 @@ model UserPointInfo {
   updatedAt DateTime @updatedAt
   userId    User?    @relation(fields: [userIdId], references: [id])
   userIdId  String?
+}
+
+enum EnumUserGender {
+  Man
+  Woman
+  Unknown
 }
